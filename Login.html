@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <link rel="icon" href="../images/arknights-surtr.ico" type="image/x-icon">
+</head>
+
+<body background="../images/backgrodn.png">
+   <div class="container" id="login-box">
+
+        <div class="form-container sign-up-container">
+            <form>
+            <h1>Register</h1>
+            <div class="txtb">
+                <input type="text" placeholder="Username">
+            </div>
+
+            <div class="txtb">
+                <input type="password" placeholder="Password">
+            </div>
+
+            <div class="txtb">
+                <input type="password" placeholder="Confirm password">
+            </div>
+
+            <button id="signup-btn" onclick="signup()">Register</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form>
+
+                <h1>Login</h1>
+
+                <div class="txtb">
+                    <input type="text" placeholder="Username">
+                </div>
+
+                <div class="txtb">
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <button id="login-btn" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome back!!</h1>
+                    <p>Login and continue your game</p>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Dont have an account?</h1>
+                    <p>Register now and play the game</p>
+                    <button class="ghost" id="signUp">Register</button>
+                </div>
+
+            </div>
+        </div>
+   </div>
+
+    <div id="main-screen">
+        <div class="header">
+            <div class="welcome-message" id="welcome-user">Welcome, User!</div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+        
+        <div class="content">
+            <h2>Welcome player!!!</h2>
+            <p>You have successfully logged in</p>
+        </div>
+    </div>
+
+
+    
+</body>
+<script>
+    $("#signUp").click(function(){
+        $("#login-box").addClass('right-panel-active')
+    })
+
+    $("#signIn").click(function(){
+        $("#login-box").removeClass('right-panel-active')
+    })
+
+    $(".txtb input").on("focus",function(){
+        $(this).addClass("focus")
+    })
+
+    $(".txtb input").on("blur",function(){
+        if($(this).val() == '')
+        $(this).removeClass("focus")
+    })
+</script>
+<script src="../scripts/scripts.js" charset="utf-8"></script>
+</html> 
