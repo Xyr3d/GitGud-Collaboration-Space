@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load</title>
+    <style>
+
+        @font-face {
+            font-family: 'Eightbit_Font';
+            src: url('../css/Pixeboy-z8XGD.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            font-family: 'Eightbit_Font';
+            font-size: 10px;
+        }
+
+        #logo {
+            width: 200px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        body {
+            background-color: #000000;
+            background-image: radial-gradient(#ff3c00, #7d1212);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ff7575;
+            text-align: center;
+            width: 100vw;
+            font-weight: bold;
+            overflow: hidden;
+        }
+
+        #fly-in {
+            font-size: 4rem;
+            margin: 40vh auto;
+            height: 20vh;
+            text-transform: uppercase;
+        }
+
+        #fly-in span {
+            display: block;
+            font-size: 3.2rem;
+            opacity: 0.8;
+        }
+
+        #fly-in div {
+            position: fixed;
+            margin: 2vh 0;
+            opacity: 0;
+            left: 0vw;
+            width: 100vw;
+            margin: auto;
+            animation: switch-revert 6s linear;
+            animation-iteration-count:1;
+            animation-fill-mode: forwards;
+        }
+
+        #fly-in div:nth-child(2) {
+            animation-delay: 3s;
+        }
+
+        #fly-in div:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes switch-revert {
+            5%{
+                opacity: 1;
+                filter: blur(0);
+                transform: scale();
+                letter-spacing: 0px
+            }
+
+            40%{
+                opacity: 1;
+                filter: blur(0);
+                transform: scale(1);
+                letter-spacing: 1px;
+            }
+
+            50%{
+                opacity: 0;
+                filter: blur(20px);
+                transform: scale(12);
+                letter-spacing: 2px;
+            }
+
+            100%{
+                opacity: 0;
+            }
+        }
+  </style>
+    </style>
+</head>
+<body>
+    <main id="fly-in">
+         <div class="logo-container">
+            <img src="../images/arknights-surtr.ico" alt="Game Logo" id="logo">
+        </div>
+        <div>
+            <h1>the Highschool of the Dead</h1>
+        </div>
+        <div>
+            <h1>Production Team: Git Gud</h1>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    var second=8;
+    function Record(){
+        second--;
+        if(second<0) {
+            location.href = "../index.html";
+        }
+    }
+    setInterval(Record,1000);
+</script>
