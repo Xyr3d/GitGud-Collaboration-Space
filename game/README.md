@@ -20,3 +20,4 @@ You can play the game here: [Play Cats vs Republicans Battle](https://Goatguy44.
 ## Local Development
 
 To run this game locally, simply open the `index.html` file in your web browser. 
+ ALSO THIS IS A V1 OF THE GAME, NOT MANY CHANGES HAS BEEN MADE YET EXCEPT FOR THE TOWER BUG, OTHER THAN THAT, I THINK WE SHOULD DIFFERENTIATE BETWEEN THE NEWER VERSION BY THE FOLDER OR SMTHIN
