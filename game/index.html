@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cats vs Republicans Battle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cats vs GOP">
+    
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="icons/icon-180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png">
+    
+    <!-- Splash Screens -->
+    <link rel="apple-touch-startup-image" href="splash/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2732x2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2388x1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1536x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2048x1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2224x1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1620x2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2160x1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1290x2796.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2796x1290.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2556x1179.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1284x2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2778x1284.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1170x2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2532x1170.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2436x1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="splash/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="splash/splash-2688x1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-container {
+            width: 800px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+            overflow: hidden;
+            background-color: #87CEEB;
+            margin: 20px auto 10px auto;
+        }
+
+        /* Target touch devices in landscape */
+        @media (hover: none) and (orientation: landscape) {
+            body {
+                min-height: unset;
+                height: 100vh;
+                padding: 2px;
+                box-sizing: border-box;
+                justify-content: flex-start;
+                gap: 2px;
+            }
+
+            .game-container {
+                width: 100%;
+                height: calc(100vh - 45px);
+                min-height: 150px;
+                margin: 0;
+                border-width: 1px;
+            }
+            
+            .controls {
+                padding: 0;
+                width: 100%;
+                margin: 0;
+                height: 40px;
+            }
+            
+            .controls button {
+                margin: 1px;
+                padding: 4px 8px;
+                font-size: 11px;
+                min-width: 65px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+            }
+
+            #moneyDisplay {
+                font-size: 14px;
+                margin: 2px;
+                position: absolute;
+                top: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.8);
+                padding: 2px 8px;
+                border-radius: 10px;
+                z-index: 2;
+            }
+
+            .tower {
+                height: 65%;
+                width: 15%;
+                bottom: calc(20px + 2%);
+            }
+
+            .tower-health {
+                font-size: 12px;
+            }
+
+            .floor {
+                height: 20px;
+            }
+
+            .unit {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Adjust unit face size for mobile */
+            .unit::after {
+                font-size: 16px;
+            }
+        }
+
+        /* For non-touch devices */
+        @media (hover: hover) {
+            .game-container {
+                max-width: 800px;
+                width: 95%;
+            }
+
+            .controls button:hover {
+                background-color: #45a049;
+            }
+        }
+
+        .unit {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .tower {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background-color: #808080;
+            bottom: 50px;
+        }
+
+        .floor {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #8B4513;
+            z-index: 1;
+        }
+
+        .health-bar {
+            position: absolute;
+            top: -10px;
+            width: 50px;
+            height: 5px;
+            background-color: #ff0000;
+        }
+
+        .tower-health {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            top: -25px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #leftTower { left: 0; }
+        #rightTower { right: 0; }
+        #leftTowerHealth { left: 0; top: -15px; }
+        #rightTowerHealth { right: 0; top: -15px; }
+
+        .controls {
+            margin: 5px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .controls button {
+            margin: 3px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            min-width: 120px;
+        }
+
+        #moneyDisplay {
+            font-size: 20px;
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .unit::after {
+            content: ":3";
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .unit.enemy::after {
+            content: ">:(";
+        }
+
+        #orientationWarning {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1000;
+            font-size: 24px;
+        }
+
+        #gameOverScreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .game-over-content {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .game-over-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .game-over-content button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        @media (orientation: portrait) {
+            #orientationWarning {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container" id="gameContainer">
+        <div class="tower" id="leftTower">
+            <div class="tower-health" id="leftTowerHealth"></div>
+        </div>
+        <div class="tower" id="rightTower">
+            <div class="tower-health" id="rightTowerHealth"></div>
+        </div>
+        <div class="floor"></div>
+        <div id="moneyDisplay">Money: 1000</div>
+    </div>
+    <div class="controls">
+        <button onclick="game.deployUnit('basicCat')">Basic Cat ($100)</button>
+        <button onclick="game.deployUnit('tankCat')">Tank Cat ($250)</button>
+        <button onclick="game.deployUnit('ninjaCat')">Ninja Cat ($400)</button>
+        <button onclick="game.deployUnit('flyingCat')">Flying Cat ($300)</button>
+        <button onclick="game.deployUnit('magicCat')">Magic Cat ($500)</button>
+    </div>
+
+    <div id="orientationWarning">
+        <div>
+            <h2>📱 Please Rotate Your Device</h2>
+            <p>This game is best played in landscape mode!</p>
+        </div>
+    </div>
+
+    <div id="gameOverScreen">
+        <div class="game-over-content">
+            <h2 id="gameOverTitle"></h2>
+            <p id="gameOverMessage"></p>
+            <button onclick="game.restartGame()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="battle-game.js"></script>
+</body>
+</html> 
